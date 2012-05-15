@@ -26,16 +26,7 @@ describe("Looping", function() {
 		expect( valuesInDict ).toEqual("apple, banana, cherry");
 	});
 	
-	it("should loop through contents of an array using forEach", function(){
-		var allNumbers= [1,2,3,4,5,6,7,8,9,10],
-		evens= [],
-		odds = []; 
-		
-		allNumbers.__;
-		
-		expect( evens ).toEqual([2,4,6,8,10]);
-		expect( odds ).toEqual([1,3,5,7,9]);
-	});
+	
 
 });
 

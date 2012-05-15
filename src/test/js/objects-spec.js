@@ -23,12 +23,16 @@ describe("Objects", function() {
 		
 		expect( new Dinosaur().name ).toEqual("Denver");
 		
+	});
+
+	it("should use constructor parameters to configure new object", function(){
+
 		function Duck(name){
-			//constructor arguments can be assigend just like in java.
+			//constructor arguments can be assigend just like in java, however you may find 'this' more important in JS
 			
-			this.makeNoise = function(){
-				//defining public instance functions is as simple as adding to 'this'
-			}
+		}
+		Duck.prototype.makeNoise = function(){
+			
 		}
 		
 		var duck = new Duck("Howard");
@@ -67,7 +71,7 @@ describe("Objects", function() {
 			
 		}
 		
-		//Inherit and then override the wold behavior
+		//Inherit and then override the wolf behavior
 		Dog.__ = Wolf.prototype; 
 		
 		expect(new Dog().genus()).toEqual("canis");
@@ -90,9 +94,56 @@ describe("Objects", function() {
 		expect(redBaron.evadeCapture()).toEqual("I will live to fight another day!");
 		expect(artherBrown.evadeCapture).toBeUndefined();
 	});
-	//duck typing
-	//object with private variables
-	//object typeof/instanceof 
+	
+	it("should show how to create private variables and methods", function(){
+		
+		var mockNotify = jasmine.createSpy("notify"), 
+		notificationService = {notify:mockNotify};
+			
+		function Account(initialBalance, notificationService){
+			//This is a private variable
+			var balance;
+			
+			//this is a privileged method
+			this.decrement = function(amount){
+			}
+			
+			//this is a private method
+			function notifyAccountHolder(){
+				//notify service with amount under 0 balance
+			}
+		}
+
+		var account = new Account(100, notificationService);
+		account.decrement(200);
+		expect(mockNotify).toHaveBeenCalledWith(-100);
+		
+		//as an exercise, are prototype methods public, privileged or private? How do you prove it?
+	});
+	
+	it("should show how to create inheritance chain", function(){
+		
+		function Person(){}
+		function Programmer(){}
+		function JavaProgrammer(){}
+		function CProgrammer(){}
+		function GWTProgrammer(){}
+		
+		//Link object prototypes together so that the following expectations are correct.
+		var gwtProgrammer, kernelHacker;
+		
+		expect(gwtProgrammer instanceof Person).toBeTruthy();
+		expect(gwtProgrammer instanceof Programmer).toBeTruthy();
+		expect(gwtProgrammer instanceof JavaProgrammer).toBeTruthy();
+		expect(gwtProgrammer instanceof CProgrammer).toBeFalsy();
+		expect(gwtProgrammer instanceof GWTProgrammer).toBeTruthy();
+		
+		expect(kernelHacker instanceof Person).toBeTruthy();
+		expect(kernelHacker instanceof Programmer).toBeTruthy();
+		expect(kernelHacker instanceof CProgrammer).toBeTruthy();
+		expect(kernelHacker instanceof JavaProgrammer).toBeFalsy();
+		expect(kernelHacker instanceof GWTProgrammer).toBeFalsy();
+	});
 });
 
 
