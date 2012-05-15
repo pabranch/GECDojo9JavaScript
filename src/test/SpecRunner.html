@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="shortcut icon" type="image/png" href="../../lib/test/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine_favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="../../lib/test/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine.css">
+  <script type="text/javascript" src="../../lib/test/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine.js"></script>
+  <script type="text/javascript" src="../../lib/test/jasmine-standalone-1.1.0/lib/jasmine-1.1.0/jasmine-html.js"></script>
+  <Script type="text/javascript" src="../../lib/test/json2.js"></Script>
+
+
+   <!-- include spec files here... -->
+  <script type="text/javascript" src="js/basictypes-spec.js"></script>
+  <script type="text/javascript" src="js/looping-spec.js"></script>
+  <script type="text/javascript" src="js/objects-spec.js"></script>
+  <script type="text/javascript" src="js/functional-spec.js"></script>
+  <script type="text/javascript" src="js/dom-spec.js"></script>
+  <script type="text/javascript" src="js/namespaces-spec.js"></script>
+  <script type="text/javascript" src="js/json-spec.js"></script>
+  <script type="text/javascript" src="js/jquery-spec.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var trivialReporter = new jasmine.TrivialReporter();
+      jasmineEnv.addReporter(trivialReporter);
+      jasmineEnv.specFilter = function(spec) {
+        return trivialReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+	<a href="" id="firstLink"></p>
+</body>
+</html>
