@@ -24,9 +24,7 @@ describe("Looping", function() {
 		
 		expect( keysInDict ).toEqual("a, b, c");
 		expect( valuesInDict ).toEqual("apple, banana, cherry");
-	});
-	
-	
+	});		
 
 });
 
