@@ -1,1 +1,78 @@
-JavaScript katas for GEC Dojo #9
+Teaching the Ultimate:
+
+In early times in Japan, bamboo-and-paper lanterns were used with candles inside. A blind man, visiting a friend one night, was offered a lantern to carry home with him.
+"I do not need a lantern," he said. "Darkness or light is all the same to me."
+"I know you do not need a lantern to find your way," his friend replied, "but if you don't have one, someone else may run into you. So you must take it."
+The blind man started off with the lantern and before he had walked very far someone ran squarely into him.
+"Look out where you are going!" he exclaimed to the stranger. "Can't you see this lantern?"
+"Your candle has burned out, brother," replied the stranger.
+
+
+Javascript Koans:
+
+Short failing tests, your job is to complete the test so that it passes.
+
+it("should not like white space", function(){
+		
+  expect( " too spacey ".__ ).toEqual("too spacey");
+		
+});
+
+
+
+Tools For Today:
+
+Aptana
+
+Jasmine BDD
+
+Chrome or Firefox
+
+
+
+
+Format:
+
+Pairing is encouraged.
+
+We will have a break about halfway through to switch pairs.
+
+Work at your own pair's pace, there is prize for finishing first.
+
+
+
+What if I need help?
+
+Your first option should be searching the web for javascript documentation.
+
+If you can't find an answer in a few searches Eric and I will be wandering around to answer questions. 
+
+Also, don't hesitate to ask others around you!
+
+
+
+Recommended Order:
+Basic Data Types
+Looping
+Objects
+Functional
+DOM
+JQuery
+
+
+
+Want More?
+Mozilla's JavaScript Guide
+http://goo.gl/DWXU
+
+Google JavaScript Style Guide
+http://goo.gl/gYHf
+
+Learning Advanced JavaScript
+http://goo.gl/IG62
+
+JavaScript the Good Parts
+http://goo.gl/omEVv
+
+Google Closure Library
+http://code.google.com/closure/
