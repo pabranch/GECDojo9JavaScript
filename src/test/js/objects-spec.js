@@ -77,7 +77,7 @@ describe("Objects", function() {
 		expect(new Dog().genus()).toEqual("canis");
 		expect(new Dog().species()).toEqual("familiaris");
 		expect(new Wolf().genus()).toEqual("canis");
-		expect(new Wold().species()).toEqual("lupus");
+		expect(new Wolf().species()).toEqual("lupus");
 	});
 	
 	it("should show the difference between changing prototype and changing instance", function(){
