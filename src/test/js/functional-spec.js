@@ -32,16 +32,16 @@ describe("Functional", function() {
 		}
 		
 		function sum(){
-			var total;
-			for (var i = 1; i < arguments.length; i++) {
+			var total = 0,i;
+			for (i = 0; i < arguments.length; i++) {
 				total += arguments[i];
 			}
 			return total;
 		}
 		
 		function multiply(){
-			var total;
-			for (var i = 1; i < arguments.length; i++) {
+			var total = 1, i;
+			for (i = 0; i < arguments.length; i++) {
 				total *= arguments[i];
 			}
 			return total;
@@ -76,7 +76,7 @@ describe("Functional", function() {
 	});
 	
 	it("should add foldLeft method to array", function(){
-		var numbers = [0,1,2,3,4,5,6,7,8,9];
+		var numbers = [1,2,3,4,5,6,7,8,9];
 
 		function add(){}
 		
@@ -113,6 +113,9 @@ describe("Functional", function() {
 
 		function lazySlice(list){
 			//how do you create a context which will execute at a later time?
+			return function(){
+				return list.slice(1,5);
+			}
 		}
 		
 		var lazy = lazySlice(numbers);
