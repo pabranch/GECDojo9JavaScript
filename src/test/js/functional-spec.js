@@ -113,9 +113,6 @@ describe("Functional", function() {
 
 		function lazySlice(list){
 			//how do you create a context which will execute at a later time?
-			return function(){
-				return list.slice(1,5);
-			}
 		}
 		
 		var lazy = lazySlice(numbers);
