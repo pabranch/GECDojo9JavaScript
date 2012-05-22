@@ -7,7 +7,7 @@ describe("JQuery", function() {
 		expect(aTag.tagName).toEqual("A");
 	});
 	
-	it("Create a link to the past with just the right amount of sarcasim", function() {
+	it("Create a link to the past with just the right amount of sarcasm", function() {
 		$("#firstLink").__; //Set href attribute
 		$("#firstLink").__; //append new text content
 		

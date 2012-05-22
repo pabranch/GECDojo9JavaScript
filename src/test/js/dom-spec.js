@@ -1,14 +1,13 @@
-describe("Dom+Jquery", function() {
+describe("Dom", function() {
 
 	var __ = null;
-	
 	
 	it("always more documents", function() {
 		var aTag = document.getElementById(__);
 		expect(aTag.tagName).toEqual("A");
 	});
 	
-	it("Create a link to the past with just the right amount of sarcasim", function() {
+	it("Create a link to the past with just the right amount of sarcasm", function() {
 		document.getElementById("firstLink").setAttribute(__,__);
 		document.getElementById("firstLink").appendChild(document.__);
 		
